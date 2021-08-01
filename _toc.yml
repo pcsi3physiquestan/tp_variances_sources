@@ -1,0 +1,7 @@
+# In _toc.yml
+- file: tp_variances.md
+  numbered: true
+
+# - part : Explications
+#   chapters:
+- file: variances_formulaire
