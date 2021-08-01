@@ -83,7 +83,7 @@ $$
 
 _Généralisation_ : 
 
-Si $Y = \prod__i X_i^{\beta_i} $ alors :
+Si $Y = \prod_i X_i^{\beta_i} $ alors :
 
 $$
 \frac{\sigma_Y}{Y} = \sqrt{\beta_i ^2 \frac{\sigma^2_{X_i}}{X_i^2}}
