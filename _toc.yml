@@ -1,7 +1,6 @@
-# In _toc.yml
-- file: tp_variances.md
+format: jb-article
+root: tp_variances.md
+options:
   numbered: true
-
-# - part : Explications
-#   chapters:
+sections:
 - file: variances_formulaire
