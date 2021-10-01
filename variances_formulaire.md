@@ -69,7 +69,7 @@ _Généralisation_ :
 Si $Y = \sum_i \alpha_i X_i $ alors :
 
 $$
-\sigma_Y = \sqrt{\alpha_i^2 \sigma^2_{X_i}}
+\sigma_Y = \sqrt{\sum_i \alpha_i^2 \sigma^2_{X_i}}
 $$
 
 ### Produit
@@ -86,7 +86,7 @@ _Généralisation_ :
 Si $Y = \prod_i X_i^{\beta_i} $ alors :
 
 $$
-\frac{\sigma_Y}{Y} = \sqrt{\beta_i ^2 \frac{\sigma^2_{X_i}}{X_i^2}}
+\frac{\sigma_Y}{Y} = \sqrt{\sum_i \beta_i ^2 \frac{\sigma^2_{X_i}}{X_i^2}}
 $$
 
 ````{attention} 
