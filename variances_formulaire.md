@@ -104,7 +104,11 @@ $$
 ````
 
 ```{margin}
-L'idée derrière cette dernière expression est d'approximer la fonction par sa tangente et d'obtenir la variation $\Delta Y$ obtenue pour une variation $\Delta X$.
+L'idée derrière cette dernière expression est d'approximer la fonction par sa tangente et d'obtenir la variation $\Delta Y$ obtenue pour une variation $\Delta X$ :
+
+$$
+\Delta Y \approx f(X) \Delta X
+$$
 
 ```
 ## Limites
