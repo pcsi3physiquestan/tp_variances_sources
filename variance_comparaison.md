@@ -97,6 +97,17 @@ On prend deux grandeurs $X_1$ et $X_2$ dont les incertitudes-type estimées sont
 
 __Attention :__ Pour une distribution uniforme, on travaille en général avec la demi-largeur $t$ __qui n'est pas l'incertitude-type de la distribution.__ L'incertitude_type d'une distribution uniforme est $\frac{t}{\sqrt{3}}$.
 
+Explication sur l'expression de l'incertitude :
+
+\begin{align}
+Y &= \frac{1}{{1 \over X1} + {1 \over X2}}\\
+u({1\over X1}) &= {u(X1)\over X1^2}\\
+u({1\over X2}) &= {u(X2)\over X2^2}\\
+u({1\over X1} + {1\over X2}) &= \sqrt{u({1\over X1})^2 + u({1\over X2})^2}\\
+u(Y) &= Y {u({1\over X1} + {1\over X2}) \over \frac{1}{{1 \over X1} + {1 \over X2}}}\\
+u(Y) &= Y^2 \sqrt{\left ({u(X1)\over X1^2}\right )^2 + \left ({u(X2)\over X2^2}\right )^2}
+\end{align}
+
 ```{code-cell} ipython3
 X1_mes = 1  # Résultat de mesurage pour X1
 X2_mes = 2  # Résultat de mesurage pour X2
@@ -110,11 +121,7 @@ Y_mes = (X1_mes * X2_mes) / (X1_mes + X2_mes)
 print("Résultat de mesurage : ", Y_mes)
 
 # Propagation des variances
-prod_mes = X1_mes * X2_mes
-somme_mes = X1_mes + X2_mes
-prod_u = X1_mes * X2_mes * np.sqrt((X1_u / X1_mes) ** 2 + (X2_u / X2_mes) ** 2)  # Incertitude sur X1 * X2
-somme_u = np.sqrt(X1_u ** 2 + X2_u ** 2)  # Incertitude sur X1 + X2
-Y_uv = Y_mes * np.sqrt((prod_u / prod_mes) ** 2 + (somme_u / somme_mes) ** 2)  # Incertitude sur le rapport qui donne Y
+Y_uv = Y_mes ** 2 * np.sqrt((X1_u / X1_mes ** 2) ** 2 + (X2_u / X2_mes ** 2) ** 2)
 print("u(Y) par propagation des variances ", Y_uv)
 
 # Simulation de Monte-Carlo (cas uniforme)
@@ -124,12 +131,15 @@ X2_sim = X2_mes + rd.uniform(-X2_t, X2_t, N)
 Y_sim = (X1_sim * X2_sim) / (X1_sim + X2_sim)
 Y_um1 = np.std(Y_sim, ddof=1)
 print("u(Y) par Monte-Carlo (cas uniforme) ", Y_um1)
+
+#plt.hist(prod_sim, bins='rice')
+plt.hist(Y_sim, bins='rice')
+plt.show()
 ```
 
 _On peut considérer que sur ce cas, la propagation des variances donne bien un résultat correct._
 
 +++
-
 
 ## Cas d'une fonction
 On prend une grandeur $X_1$ l'incertitude-type estimée est respectivement $u_1$. On cherche l'incertitude-type de $Y = f(X_1) $.

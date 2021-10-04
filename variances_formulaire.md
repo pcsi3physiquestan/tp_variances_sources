@@ -27,7 +27,7 @@ Le carré d'un écart-type est appelé _variance_ et lorsqu'on réalise une opé
 
 ````{admonition} Exemple
 :class: note
-Dans le cas $Y = X_1 + X_2$, si les variables $X_1$ et X_2$ sont indépendantes (entre autre), alors, on peut montrer que :
+Dans le cas $Y = X_1 + X_2$, si les variables $X_1$ et $X_2$ sont __indépendantes__ (entre autre), alors, on peut montrer que :
 
 $$
 v_Y = v_{X_1} + v_{X_2}
@@ -114,3 +114,20 @@ L'avantage de la propagation des variances est la simplicité d'utilisation car 
 * elles nécessitent des hypothèses restrictives qui ne sont pas toujours vérifiées. La méthode de Monte-Carlo demande moins d'hypothèse (dans le cadre du programme, l'indépendance des variables est suffisantes).
 
 Le cas $Y=f(X)$ est notamment très souvent mis en défaut (notamment quand la dérivée s'annule au voisinage de $x_{mes}$ ou en $x_{mes}$.
+
+## Distribution uniforme : largeur et écart-type
+
+````{attention}
+Quand on utilise une distribution uniforme avec une simulation de Monte-Carlo, on travail directement avec la largeur de la distribution uniforme qui permet, grâce à Python de créer N tirages aléatoires.
+
+Quand on utilise la propagation des variances, __il faut obligatoirement travailler avec des incertitudes-types, soit des grandeurs analogues à des écart-type.__ 
+
+La largeur de la distribution uniforme _n'est pas l'écart-type._ Mais on peut obtenir l'écart-type de la largeur (ou demie-largeur). Soit une distribution uniforme de largeur $2t$ (et donc de demie-largeur $t$), alors on montre (calcul non donné ici) que l'écart-type de la distribution est alors :
+
+$$
+\sigma = \frac{t}{\sqrt{3}}
+$$
+
+Lorsqu'on utilise la propagation des variances, on prendra donc soin de divisé la demie-largeur par $\sqrt{3}$ lorsqu'on travaille avec des distributions uniformes (ce qui, pour rappel, est ce qu'on fait en général).
+
+````
