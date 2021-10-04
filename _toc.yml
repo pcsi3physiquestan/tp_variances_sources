@@ -4,4 +4,4 @@ options:
   numbered: true
 sections:
 - file: variances_formulaire
-- file: variance_comparaison
+- file: variance_comparaison.md
