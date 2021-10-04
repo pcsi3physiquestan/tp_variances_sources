@@ -23,7 +23,7 @@ On se propose de comparer les résultats obtenus sur des exemples pour la somme,
 ## Cas d'une somme
 On prend deux grandeurs $X_1$ et $X_2$ dont les incertitudes-type estimées sont respectivement $u_1$ et $u_2$. On cherche l'incertitude-type de $Y = X_1 + X_2$.
 
-__Attention :__ Pour une distribution uniforme, on travaille en général avec la demi-largeur $t$ __qui n'est pas l'incertitude-type de la distribution.__ L'incertitude_type d'une distribution uniforme est $\frac{t}{\sqrt{3}}$.
+__Attention :__ Pour une distribution uniforme, on travaille en général avec la demie-largeur $t$ __qui n'est pas l'incertitude-type de la distribution.__ L'incertitude-type d'une distribution uniforme est $\frac{t}{\sqrt{3}}$.
 
 ```{code-cell} ipython3
 import numpy as np
@@ -61,7 +61,7 @@ _On peut considérer que sur ce cas, la propagation des variances donne bien un 
 ## Cas d'un produit
 On prend deux grandeurs $X_1$ et $X_2$ dont les incertitudes-type estimées sont respectivement $u_1$ et $u_2$. On cherche l'incertitude-type de $Y = X_1 \times X_2$.
 
-__Attention :__ Pour une distribution uniforme, on travaille en général avec la demi-largeur $t$ __qui n'est pas l'incertitude-type de la distribution.__ L'incertitude_type d'une distribution uniforme est $\frac{t}{\sqrt{3}}$.
+__Attention :__ Pour une distribution uniforme, on travaille en général avec la demi-largeur $t$ __qui n'est pas l'incertitude-type de la distribution.__ L'incertitude-type d'une distribution uniforme est $\frac{t}{\sqrt{3}}$.
 
 ```{code-cell} ipython3
 X1_mes = 1  # Résultat de mesurage pour X1
@@ -95,7 +95,7 @@ _On peut considérer que sur ce cas, la propagation des variances donne bien un 
 ## Cas d'une combinaison
 On prend deux grandeurs $X_1$ et $X_2$ dont les incertitudes-type estimées sont respectivement $u_1$ et $u_2$. On cherche l'incertitude-type de $Y = {X_1 X_2 \over X_2 + X_1}$.
 
-__Attention :__ Pour une distribution uniforme, on travaille en général avec la demi-largeur $t$ __qui n'est pas l'incertitude-type de la distribution.__ L'incertitude_type d'une distribution uniforme est $\frac{t}{\sqrt{3}}$.
+__Attention :__ Pour une distribution uniforme, on travaille en général avec la demi-largeur $t$ __qui n'est pas l'incertitude-type de la distribution.__ L'incertitude-type d'une distribution uniforme est $\frac{t}{\sqrt{3}}$.
 
 Explication sur l'expression de l'incertitude :
 
@@ -131,10 +131,6 @@ X2_sim = X2_mes + rd.uniform(-X2_t, X2_t, N)
 Y_sim = (X1_sim * X2_sim) / (X1_sim + X2_sim)
 Y_um1 = np.std(Y_sim, ddof=1)
 print("u(Y) par Monte-Carlo (cas uniforme) ", Y_um1)
-
-#plt.hist(prod_sim, bins='rice')
-plt.hist(Y_sim, bins='rice')
-plt.show()
 ```
 
 _On peut considérer que sur ce cas, la propagation des variances donne bien un résultat correct._
@@ -145,7 +141,7 @@ _On peut considérer que sur ce cas, la propagation des variances donne bien un 
 On prend une grandeur $X_1$ l'incertitude-type estimée est respectivement $u_1$. On cherche l'incertitude-type de $Y = f(X_1) $.
 
 
-__Attention :__ Pour une distribution uniforme, on travaille en général avec la demi-largeur $t$ __qui n'est pas l'incertitude-type de la distribution.__ L'incertitude_type d'une distribution uniforme est $\frac{t}{\sqrt{3}}$.
+__Attention :__ Pour une distribution uniforme, on travaille en général avec la demi-largeur $t$ __qui n'est pas l'incertitude-type de la distribution.__ L'incertitude-type d'une distribution uniforme est $\frac{t}{\sqrt{3}}$.
 
 On prendra deux fonctions :
 * $f(x) = x^2$
