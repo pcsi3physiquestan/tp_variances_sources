@@ -55,6 +55,15 @@ _Toutes ces expressions sont admises._
 
 On peut ensuite utiliser une composition de ces différents cas.
 
+### Cas d'un mesurande directe
+````{important}
+Pour un mesurande directe $X$ pour lequel on a estimé plusieurs sources d'incertitudes d'incertitudes-type respectives $u_1, u_2, \ldots, u_i$. L'incertitude-type sur le mesurande $X$ est alors :
+
+$$
+u(X) = \sqrt{u_1^2 + u_2^2 + \ldots + u_i^2}
+$$
+````
+
 ### Somme
 ````{important} 
 Si $Y = \alpha_1 X_1 + \alpha_2 X_2$ alors :

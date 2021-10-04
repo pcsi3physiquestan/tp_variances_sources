@@ -201,7 +201,7 @@ print("u(Y) par Monte-Carlo (cas uniforme) ", Y_um1)
 
 Et là, on observe un grand écart. La raison est que la fonction n'est pas du tout linéaire et qu'on est proche d'un extremum : il y a un changement de pente.
 
-Comme expliqué précédemment, la relation donnée vient d'une approximatino de la fonction par sa tangente. Autour du maximum d'un cosinus, ce n'est pas valable.
+Comme expliqué précédemment, la relation donnée vient d'une approximation de la fonction par sa tangente. Autour du maximum d'un cosinus, ce n'est pas valable.
 
 +++
 
