@@ -1,7 +1,7 @@
 # in _config.yml
 #######################################################################################
 # Book settings
-title                       : "TP Mécanique et Thermodynamique"
+title                       : "Propagation de la variance"
 author                      : C. Lacpatia  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
 logo                        : ""  # A path to the book logo
