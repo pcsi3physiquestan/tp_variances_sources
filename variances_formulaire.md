@@ -108,7 +108,7 @@ Le cas $Y=X^2$ n'est pas un produit car $X$ n'est pas indépendant de $X$.
 Si $Y = f(X)$ alors, si f n'est pas trop non linéaire :
 
 $$
-u(Y) = \left\vert \frac{\rm{d}Y}{\rm{dX}}(x_{mes}) \right\vert u(X)
+u(Y) = \left\vert \frac{\rm{d}f}{\rm{dX}}(x_{mes}) \right\vert u(X)
 $$
 ````
 
@@ -116,7 +116,7 @@ $$
 L'idée derrière cette dernière expression est d'approximer la fonction par sa tangente et d'obtenir la variation $\Delta Y$ obtenue pour une variation $\Delta X$ :
 
 $$
-\Delta Y \approx f(X) \Delta X
+\Delta Y \approx f'(X) \Delta X
 $$
 
 ```
